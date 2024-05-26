@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SimplerPiStats</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}">
+</head>
+<body>
+
+    <div class="centered_div">
+        <div class="data">
+            <h2 class="heading" style="margin-bottom: 0;">CPU status</h2>
+            <img class="emoji" src="static/CPU/{{ cpu_status }}.png">
+            <p class="numbers" id="cpu_status_numbers" style="margin-top: 31px">{{ cpu_status_numbers }}</p>
+        </div>
+        <div class="data">
+            <h2 class="heading">Temperature</h2>
+            <img class="emoji" src="static/fire/{{ temp }}.png">
+            <p class="numbers" id="temp_numbers">{{ Celsius }}</p>
+        </div>
+    </div>
+    
+<script>
+
+    // Yes, these are out here for a reason, DON'T move them, you WILL break things!!
+    // const dataBackroundColor = document.getElementById("divBgColor");
+    // const speed_test_element = document.getElementsByClassName("speedTest")[0]
+    // https://www.youtube.com/watch?v=yWULCfJ2PGA
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        for (div of document.getElementsByClassName("data")) {
+
+            // can't decide between two basically same shades of green to make the background? HI BILLY MAYS HERE with copy pasted code of the first web result for "javascript random color" because you spent wayyyyyyyyyy to fucking long trying to figure out how to seed a random number in JS like it was C so you didn't have to make the decision yourself and now you're too shocked by your own incompetence that you can't bring yourself to edit it
+            // ... thank you stackoverflow Anatoliy :)
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+                div.style.backgroundColor = color
+            } 
+    });
+</script>
+</body>
+</html>

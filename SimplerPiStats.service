@@ -1,9 +1,9 @@
 [Unit]
-Description=SimplePiStats
+Description=SimplerPiStats
 After=network.target
 
 [Service]
-ExecStart=/path/to/file/venv/bin/python3 SimplePiStats.py
+ExecStart=/usr/bin/python3 SimplerPiStats.py
 WorkingDirectory=/path/to/file
 StandardOutput=inherit
 StandardError=inherit
