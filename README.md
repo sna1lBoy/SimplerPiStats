@@ -6,11 +6,11 @@ An even simple UI designed for people running their Raspberry Pi as a server, an
 ## How to install/update
 Simply change directory (`cd`) into the directory where you want to store SimplerPiStats, then run the following command:
 
-`bash <(curl -s https://raw.githubusercontent.com/sna1lBoy/SimplerPiStats/main/install.sh)`
+`bash <(curl -s https://codeberg.org/snailboy/SimplerPiStats/raw/branch/main/install.sh)`
 
 If you with to use SimplerPiStats without a virtual environment (venv), use the following command instead:
 
-`bash <(curl -s https://raw.githubusercontent.com/sna1lBoy/SimplerPiStats/main/non-venv_install.sh)`
+`bash <(curl -s https://codeberg.org/snailboy/SimplerPiStats/raw/branch/main/non-venv_install.sh)`
 
 ## How to use
 Type the following into a web browser `<your pi's local ip address>:5556`. If you need help finding your Pi's local IP address, simply ssh into the Pi, and type in `hostname -I`, your Pi's local IP address is everything before the space.
