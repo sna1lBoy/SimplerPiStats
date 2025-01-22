@@ -7,7 +7,7 @@ fi
 
 # Clone the latest version of the repo
 echo Cloning from repo...
-git clone https://github.com/sna1lBoy/SimplerPiStats.git SimplerPiStats > /dev/null 2>&1
+git clone https://codeberg.org/snailboy/SimplerPiStats.git SimplerPiStats > /dev/null 2>&1
 
 cd SimplerPiStats || return
 
